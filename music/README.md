@@ -6,3 +6,6 @@ Przykladowy admin:
 
 login : admin@test.com
 haslo : 123456
+
+
+Rafal Lewandowski 235268
