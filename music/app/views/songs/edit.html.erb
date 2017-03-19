@@ -1,0 +1,44 @@
+<h2>Edit song</h2>
+
+<%= form_for(@song, url: "/songs/edit/#{@song.id}") do |f| %>
+
+    <% if @song.errors.any? %>
+        <% @song.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :author %><br />
+      <%= f.text_field :author, autofocus: true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :key %><br />
+      <%= f.text_field :key, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :chord %><br />
+      <%= f.text_field :chord, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :instrument %><br />
+      <%= f.text_field :instrument, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :duration %><br />
+      <%= f.text_field :duration, class: 'form-control' %>
+    </div>
+
+    <%= f.submit "Save", class: 'btn btn-default' %>
+
+<% end %>
+

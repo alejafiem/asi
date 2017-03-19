@@ -1,0 +1,23 @@
+<tr>
+  <td>
+    <%= song.author %>
+  </td>
+  <td>
+    <%= song.name %>
+  </td>
+  <td>
+    <%= song.key %>
+  </td>
+  <td>
+    <%= song.chord %>
+  </td>
+  <td>
+    <%= song.instrument %>
+  </td>
+  <td>
+    <%= song.duration %> seconds
+  </td>
+  <td>
+    <%= link_to 'Edit', "/songs/edit/#{song.id}" %> | <%= link_to 'Delete', "/songs/delete/#{song.id}", :method => :delete %>
+  </td>
+</tr>

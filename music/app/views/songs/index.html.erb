@@ -1,0 +1,17 @@
+
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Author</th>
+    <th>Name</th>
+    <th>Key</th>
+    <th>Chord</th>
+    <th>Instrument</th>
+    <th>Duration</th>
+    <th></th>
+  </tr>
+
+  <%= render @songs %>
+</table>
+
+<%= will_paginate @songs, renderer: BootstrapPagination::Rails %>
